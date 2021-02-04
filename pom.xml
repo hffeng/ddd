@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.swhy</groupId>
+    <artifactId>ddd</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <description>domain-driven design application</description>
+    <modules>
+        <module>ddd-domain</module>
+        <module>ddd-application</module>
+        <module>ddd-web</module>
+        <module>ddd-common</module>
+        <module>ddd-infrastructure</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <project.module.version>1.0-SNAPSHOT</project.module.version>
+        <log4j.version>1.2.17</log4j.version>
+    </properties>
+
+    <dependencies>
+        <!--
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+    <!-- 版本说明：这里统一管理依赖的版本号 -->
+    <dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.swhy</groupId>
+                <artifactId>ddd-web</artifactId>
+                <version>${project.module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.swhy</groupId>
+                <artifactId>ddd-application</artifactId>
+                <version>${project.module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.swhy</groupId>
+                <artifactId>ddd-domain</artifactId>
+                <version>${project.module.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.swhy</groupId>
+                <artifactId>ddd-common</artifactId>
+                <version>${project.module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.swhy</groupId>
+                <artifactId>ddd-infrastructure</artifactId>
+                <version>${project.module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.60</version>
+            </dependency>
+
+
+            <!--beg springboot+mybatis+oracle dependency  -->
+            <dependency>
+                <groupId>oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>12.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>2.0.5.RELEASE</version>
+            </dependency>
+            <!-- 集成mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.2.0</version>
+            </dependency>
+            <!--end springboot+mybatis+oracle dependency  -->
+
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
