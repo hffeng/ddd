@@ -17,10 +17,7 @@
             <groupId>com.swhy</groupId>
             <artifactId>ddd-common</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.swhy</groupId>
-            <artifactId>ddd-repository</artifactId>
-        </dependency>
+
     </dependencies>
 
     <properties>

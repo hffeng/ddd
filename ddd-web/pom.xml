@@ -59,7 +59,8 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 修改后立即生效，热部署
+
+        <!-- 修改后立即生效，热部署 -->
         <dependency>
             <groupId>oracle</groupId>
             <artifactId>ojdbc6</artifactId>
@@ -77,7 +78,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
-         -->
+
 
     </dependencies>
 

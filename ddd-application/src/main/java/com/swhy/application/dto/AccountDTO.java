@@ -10,6 +10,11 @@ public class AccountDTO {
         this.accountNo = accountNo;
     }
 
+    public AccountDTO(){
+        super();
+    }
+
+
 
     public  AccountVO toAccountVO(){
         return new AccountVO(accountNo);

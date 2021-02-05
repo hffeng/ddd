@@ -1,34 +1,34 @@
-import com.alibaba.fastjson.JSON;
 import com.swhy.Application;
-import com.swhy.infrastructure.DddRepoImpl;
-import com.swhy.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
-import java.util.List;
-
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
-//@MapperScan("com.swhy.*")
+@SpringBootTest(classes = ApplicationTest.class)
 public class ApplicationTest {
 
-    @Resource
-    private DddRepoImpl dddRepo;
+//    @Autowired
+//    private DddController dddController;
 
-    @Resource
-    private UserService userService;
+    @Autowired
+    protected ApplicationContext ctx;
 
     @Test
     public void toTest(){
-        List<Object> list = dddRepo.findAccountList();
-        for(Object accountVO:list){
-            System.out.println(JSON.toJSONString(accountVO));
+        String[] beans = ctx.getBeanDefinitionNames();
+        for (String str:beans){
+            System.out.println(str);
         }
+//        List<Object> list = dddRepo.findAccountList();
+//        for(Object accountVO:list){
+//            System.out.println(JSON.toJSONString(accountVO));
+//        }
+//        accountManager.getInfoList();
+
         System.out.println();
-        userService.hashCode();
+//        userService.hashCode();
     }
 }
