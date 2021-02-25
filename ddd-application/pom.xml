@@ -26,9 +26,5 @@
             <groupId>com.swhy</groupId>
             <artifactId>ddd-domain</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.swhy</groupId>
-            <artifactId>ddd-domain</artifactId>
-        </dependency>
     </dependencies>
 </project>

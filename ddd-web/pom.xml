@@ -30,6 +30,10 @@
             <groupId>com.swhy</groupId>
             <artifactId>ddd-common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.swhy</groupId>
+            <artifactId>ddd-infrastructure</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -48,11 +52,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.swhy</groupId>
-            <artifactId>ddd-infrastructure</artifactId>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -92,7 +92,7 @@
                     <!--
                     <classifier>exec</classifier>
                     -->
-                    <mainClass>com.swhy.Application</mainClass>
+                    <mainClass>Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

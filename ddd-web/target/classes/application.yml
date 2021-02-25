@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8080
 
 spring:
   datasource:
@@ -33,7 +33,7 @@ spring:
     connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
 mybatis:
-  mapper-locations: classpath*:mybatis/*.xml    # mapper映射文件位置
-  type-aliases-package: com.swhy.infrastructure.vo    # 实体类所在的位置
+  mapper-locations: classpath*:/mybatis/*.xml   # mapper映射文件位置
+#  type-aliases-package: com.swhy.infrastructure.vo    # 实体类所在的位置
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #用于控制台打印sql语句

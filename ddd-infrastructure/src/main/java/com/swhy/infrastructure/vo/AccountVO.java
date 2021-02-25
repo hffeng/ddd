@@ -1,5 +1,6 @@
 package com.swhy.infrastructure.vo;
 
+
 public class AccountVO {
 
     private String userId;
@@ -7,6 +8,8 @@ public class AccountVO {
     private String userName;
     private String userCode;
     private String orgId;
+    private String province;
+    private String provinceId;
 
     public String getUserId() {
         return userId;
@@ -46,5 +49,21 @@ public class AccountVO {
 
     public void setOrgId(String orgId) {
         this.orgId = orgId;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getProvinceId() {
+        return provinceId;
+    }
+
+    public void setProvinceId(String provinceId) {
+        this.provinceId = provinceId;
     }
 }
